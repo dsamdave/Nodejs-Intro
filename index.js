@@ -13,6 +13,9 @@ app.listen(PORT, ()=>{
     console.log(`Server started running on ${PORT}`)
 })
 
+
+
+
 // GET POST PUT PATCH DELETE
 // Endpoints /All-user /user /edit-profile /edit-user-profile
 
@@ -20,6 +23,11 @@ app.listen(PORT, ()=>{
 // body, params, query
 
 // API
+
+
+
+
+
 app.get("/", (request, response)=>{
 
     response.send("Welcome to carrerex server")
@@ -48,7 +56,11 @@ app.get("/users", (request, response)=>{
 
 app.post("/add-user", (req, res)=>{
 
-    const newUser = req.body
+    const category = req.body.category
+
+    if(!category){
+        return res.json("fgcfgcvghv ")
+    }
 
 
     res.json({
